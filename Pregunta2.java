@@ -1,9 +1,7 @@
 // ¿Qué algoritmos crees que usan por tus juegos y aplicaciones favoritas?
 
 //codigo de java para el algoritmo de ordenamiento de burbuja en forma recursiva con programacion orientada a objetos
-package com.thealgorithms.sorts; 
-
-
+package com.thealgorithms.sorts;
 
 public class BubbleSort {
     public int[] sort(int[] unsorted) {
@@ -28,5 +26,4 @@ public class BubbleSort {
         return sort(unsorted, n - 1);
     }
 }
-
 
