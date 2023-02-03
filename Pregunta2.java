@@ -1,29 +1,42 @@
 // ¿Qué algoritmos crees que usan por tus juegos y aplicaciones favoritas?
 
-//codigo de java para el algoritmo de ordenamiento de burbuja en forma recursiva con programacion orientada a objetos
-package com.thealgorithms.sorts;
 
-public class BubbleSort {
-    public int[] sort(int[] unsorted) {
-        int[] sorted = new int[unsorted.length];
-        for (int i = 0; i < unsorted.length; i++) {
-            sorted[i] = unsorted[i];
+
+
+//codigo de java para escribir los 1000 primeros numeros primos que existeten con un main que los imprima en pantalla
+
+public class Pregunta2 {
+    public static void main(String[] args) {
+        int n = 1000;
+        int count = 0;
+        int i = 2;
+        while (count < n) {
+            if (isPrime(i)) {
+                System.out.println(i);
+                count++;
+            }
+            i++;
         }
-        return sort(sorted, sorted.length);
     }
-
-    private int[] sort(int[] unsorted, int n) {
-        if (n == 1) {
-            return unsorted;
+    public static boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
         }
-        for (int i = 0; i < n - 1; i++) {
-            if (unsorted[i] > unsorted[i + 1]) {
-                int temp = unsorted[i];
-                unsorted[i] = unsorted[i + 1];
-                unsorted[i + 1] = temp;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
             }
         }
-        return sort(unsorted, n - 1);
+        return true;
     }
 }
+
+
+
+
+
+
+
+
+
 
